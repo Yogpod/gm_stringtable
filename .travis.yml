@@ -24,8 +24,6 @@ matrix:
       dist: bionic
       compiler: gcc
       before_install:
-        - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
-        - sudo apt-get -q update
         - export CC=gcc-9
           export CXX=g++-9
           export AR=gcc-ar-9

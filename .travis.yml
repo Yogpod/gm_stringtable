@@ -1,5 +1,5 @@
 language: cpp
-if: tag IS present
+if: branch = master
 git:
   depth: 1
 env:

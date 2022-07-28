@@ -27,6 +27,11 @@ matrix:
         - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
         - sudo apt-get -q update
         - sudo apt-get -y install gcc-4.8
+        - export CC=gcc-9
+          export CXX=g++-9
+          export AR=gcc-ar-9
+          export NM=gcc-nm-9
+          export RANLIB=gcc-ranlib-9
       addons:
         apt:
           sources:
@@ -39,11 +44,7 @@ matrix:
           PROJECT_OS=linux
           PREMAKE5_URL="https://github.com/danielga/garrysmod_common/releases/download/premake-build%2F5.0.0-beta1/premake-5.0.0-beta1-linux.tar.gz"
       before_install:
-        - export CC=gcc-9
-          export CXX=g++-9
-          export AR=gcc-ar-9
-          export NM=gcc-nm-9
-          export RANLIB=gcc-ranlib-9
+
     - os: osx
       osx_image: xcode11.4
       env:
